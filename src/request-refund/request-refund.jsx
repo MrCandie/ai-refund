@@ -49,7 +49,7 @@ export default function RequestRefund() {
     const fetchOrders = async () => {
       try {
         const res = await axios.get(
-          "http://localhost:8080/api/v1/request/orders",
+          "https://ai-refund-backend.onrender.com/api/v1/request/orders",
         );
 
         setOrders(res.data.data || res.data || []);
@@ -97,11 +97,14 @@ export default function RequestRefund() {
     }, 700);
 
     try {
-      const res = await axios.post("http://localhost:8080/api/v1/request", {
-        orderId,
-        category: selectedCategory,
-        reason: description.trim(),
-      });
+      const res = await axios.post(
+        "https://ai-refund-backend.onrender.com/api/v1/request",
+        {
+          orderId,
+          category: selectedCategory,
+          reason: description.trim(),
+        },
+      );
 
       clearInterval(stepTimer);
       setProcessingStep(2);

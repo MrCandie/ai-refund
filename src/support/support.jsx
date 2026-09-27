@@ -6,7 +6,7 @@ import AdminLayout from "../layout/admin-layout";
 import RefundRequestModal from "../admin-request/view-admin-request";
 import { useNavigate } from "react-router-dom";
 
-const API_URL = "http://localhost:8080";
+const API_URL = "https://ai-refund-backend.onrender.com";
 
 const statusMap = {
   approved: "Approved",

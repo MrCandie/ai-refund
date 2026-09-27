@@ -56,7 +56,9 @@ export default function AdminRequests() {
         setLoading(true);
         setErrorMessage("");
 
-        const res = await axios.get("http://localhost:8080/api/v1/request");
+        const res = await axios.get(
+          "https://ai-refund-backend.onrender.com/api/v1/request",
+        );
 
         setRequests(res.data.data || res.data.requests || res.data || []);
       } catch (error) {

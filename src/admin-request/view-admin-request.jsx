@@ -94,7 +94,7 @@ export default function RefundRequestModal({
       setUpdating(true);
 
       const response = await axios.post(
-        "http://localhost:8080/api/v1/request/update",
+        "https://ai-refund-backend.onrender.com/api/v1/request/update",
         {
           requestId,
           status: nextStatus,
